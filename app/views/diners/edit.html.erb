@@ -1,0 +1,30 @@
+<h1>Edit Profile</h1>
+
+<div class="member_info">
+<p><%= @diner.name %></p>
+<p><%= @diner.email %></p>
+</div>
+
+<div class="edit_member">
+<%= form_for @diner do |f| %>
+	<p class="field">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p class="field">
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+	</p>
+	<p class="field">
+		<%= f.label :password %>
+		<%= f.text_field :password %>
+	</p>
+	<p class="field">
+		<%= f.label :password_confirmation %>
+		<%= f.text_field :password_confirmation %>
+	</p>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>
+</div>
