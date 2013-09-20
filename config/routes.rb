@@ -1,5 +1,5 @@
 SeatYourself::Application.routes.draw do
-  resources :diners
+  resources :diners, except: :index
   resources :restaurants
   resources :restaurant_owners
   

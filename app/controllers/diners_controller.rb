@@ -17,10 +17,6 @@ class DinersController < ApplicationController
 		@diner = Diner.find(params[:id])
 	end
 
-	def index
-		@diner = Diner.all
-	end
-
 	def edit
 		@diner = Diner.find(params[:id])
 	end
@@ -42,6 +38,10 @@ class DinersController < ApplicationController
 		redirect_to new_diner_path(@diner)
 	end
 
+	# def index
+	# 	@diner = Diner.all
+	# end
+	
 	private
 	def diner_params
 		params.require(:diner).permit(:name, :email, :password, :password_confirmation)
