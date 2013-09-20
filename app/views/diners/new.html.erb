@@ -1,11 +1,6 @@
-<h1>Edit Profile</h1>
+<h1>Registration</h1>
 
-<div id="member_info">
-	<p><%= @diner.name %></p>
-	<p><%= @diner.email %></p>
-</div>
-
-<div class="edit_member">
+<div id="new_member">
 <%= form_for @diner do |f| %>
 	<p class="field">
 		<%= f.label :name %>

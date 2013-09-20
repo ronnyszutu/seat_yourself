@@ -7,7 +7,7 @@ class DinersController < ApplicationController
 		@diner = Diner.new diner_params	
 
 		if @diner.save
-			redirect_to diners_url
+			redirect_to action: 'new'
 		else
 			render :new
 		end
@@ -38,7 +38,8 @@ class DinersController < ApplicationController
 	def destroy
 		@diner = Diner.find(params[:id])
 		@diner.destroy
-		redirect_to diner_path
+		# redirect_to diner_path
+		redirect_to new_diner_path(@diner)
 	end
 
 	private

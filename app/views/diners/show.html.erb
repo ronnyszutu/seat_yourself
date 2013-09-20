@@ -1,7 +1,8 @@
 <h1>Member Profile</h1>
-<div class="member_info">
-<p><%= @diner.name %></p>
-<p><%= @diner.email %></p>
+<div id="member_info">
+	<p><%= @diner.name %></p>
+	<p><%= @diner.email %></p>
 </div>
+
 <%= link_to 'Edit', edit_diner_path(@diner) %>
 <%= link_to 'Delete', @diner, :confirm => "Are you sure you want to delete this account?", :method => :delete %>
