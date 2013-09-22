@@ -1,0 +1,25 @@
+<h1>Restaurant Registration</h1>
+
+<div id="new_member">
+<%= form_for @restaurant do |f| %>
+	<p class="field">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p class="field">
+		<%= f.label :address %>
+		<%= f.text_field :address %>
+	</p>
+	<p class="field">
+		<%= f.label :cuisine %>
+		<%= f.text_field :cuisine %>
+	</p>
+	<p class="field">
+		<%= f.label :phonenumber %>
+		<%= f.text_field :phonenumber %>
+	</p>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>
+</div>
