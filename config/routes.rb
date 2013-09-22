@@ -1,4 +1,10 @@
 SeatYourself::Application.routes.draw do
+  get "reservation/new"
+  get "reservation/create"
+  get "reservation/show"
+  get "reservation/edit"
+  get "reservation/update"
+  get "reservation/destroy"
   resources :diners, except: :index
   resources :restaurants
   resources :restaurant_owners
