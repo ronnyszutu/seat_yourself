@@ -1,0 +1,26 @@
+<h1>Edit Profile</h1>
+<%= link_to 'Delete', @restaurant_owner, :confirm => "Are you sure you want to delete this account?", :method => :delete %>
+
+<div class="edit_member">
+<%= form_for @restaurant_owner do |f| %>
+	<p class="field">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p class="field">
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+	</p>
+	<p class="field">
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+	</p>
+	<p class="field">
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation %>
+	</p>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>
+</div>

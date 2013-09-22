@@ -41,7 +41,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# Use debugger
+#Use debugger
 
 
 group :development, :test do

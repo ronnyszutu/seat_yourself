@@ -1,0 +1,12 @@
+<h1>Member Profile</h1>
+<% if flash[:notice]  %>
+	<div class="noitce"><%= flash[:notice] %></div>
+<% end %>
+
+<div id="member_info">
+	<p><%= @restaurant_owner.name %></p>
+	<p><%= @restaurant_owner.email %></p>
+</div>
+
+<%= link_to 'Edit', edit_restaurant_owner_path(@restaurant_owner) %>
+<%= link_to 'Delete', @restaurant_owner, :confirm => "Are you sure you want to delete this account?", :method => :delete %>
