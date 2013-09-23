@@ -1,2 +1,11 @@
-<h1>Reservation#show</h1>
-<p>Find me in app/views/reservation/show.html.erb</p>
+<h1>Reservation</h1>
+
+<div id="reservation_made">
+<p>party size</p>
+<p><%= @reservation.party_size %></p>
+<p>reservation time</p>
+<p><%= @reservation.reservation_time %></p>
+</div>
+
+<%= link_to 'Edit', edit_reservation_path(@reservation) %>
+<%= link_to 'Delete', @reservation, :confirm => "Are you sure you want to delete this reservation?", :method => :delete %>
