@@ -1,15 +1,6 @@
 <h1>Reservation</h1>
 
-<!-- <div id="new_reservation">
-
-<%= select :party_size, nil, 1..50 %>
-
-<%= datetime_select(:reservation_time, :prompt => {:day => 'Choose day', :month => 'Choose month', :year => 'Choose year', :hour => true}) %>
-	
-<%= submit_tag nil, :class => "form_submit" %>
-</div> -->
-
-<div id="new_member">
+<div id="new_reservation">
 <%= form_for @reservation do |f| %>
 	<p class="field">
 		<%= f.label :party_size %><br>
