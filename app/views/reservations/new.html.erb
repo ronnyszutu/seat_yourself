@@ -1,0 +1,17 @@
+<h1>Reservation</h1>
+
+<div id="new_reservation">
+<%= form_for @reservation do |f| %>
+	<p class="field">
+		<%= f.label :party_size %><br>
+		<%= f.select :party_size, 1..10 %>
+	</p>
+	<p class="field">
+		<%= f.label :reservation_time %><br>
+		<%= f.datetime_select :reservation_time %>
+	</p>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>
+</div>

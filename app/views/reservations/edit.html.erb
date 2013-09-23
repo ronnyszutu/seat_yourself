@@ -1,0 +1,18 @@
+<h1>Edit Reservations</h1>
+<%= link_to 'Delete', @reservation, :confirm => "Are you sure you want to delete this reservation?", :method => :delete %>
+
+<div class="edit_reservation">
+<%= form_for @reservation do |f| %>
+	<p class="field">
+		<%= f.label :party_size %><br>
+		<%= f.select :party_size, 1..10 %>
+	</p>
+	<p class="field">
+		<%= f.label :reservation_time %><br>
+		<%= f.datetime_select :reservation_time %>
+	</p>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>
+</div>

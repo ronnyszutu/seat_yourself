@@ -1,7 +1,11 @@
 SeatYourself::Application.routes.draw do
+
   # get "sessions/new"
   # get "sessions/create"
   # get "sessions/destroy"
+
+  resources :reservations
+
   resources :diners, except: :index
   resources :restaurants
   # resources :restaurant_owners
